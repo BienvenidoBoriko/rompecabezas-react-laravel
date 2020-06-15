@@ -36417,7 +36417,7 @@ var Home = /*#__PURE__*/function (_Component) {
       var log = imagenes.length;
       var numImg = log / ++nivel;
       var ancho = 55 / numImg;
-      var imgNodos = document.getElementsByClassName('img-small');
+      var imgNodos = document.getElementsByClassName("img-small");
 
       var _iterator = _createForOfIteratorHelper(imgNodos),
           _step;
@@ -36425,7 +36425,7 @@ var Home = /*#__PURE__*/function (_Component) {
       try {
         for (_iterator.s(); !(_step = _iterator.n()).done;) {
           var img = _step.value;
-          img.style.maxHeight = ancho + 'vh';
+          img.style.maxHeight = ancho + "vh";
         }
       } catch (err) {
         _iterator.e(err);
@@ -36439,7 +36439,7 @@ var Home = /*#__PURE__*/function (_Component) {
       var _this2 = this;
 
       var nivel = e.target.value;
-      fetch("http://192.168.10.10/nivel/".concat(nivel, "/img/").concat(imagen.split('/')[2])).then(function (response) {
+      fetch("http://".concat(window.location.hostname, "/nivel/").concat(nivel, "/img/").concat(imagen.split("/")[2])).then(function (response) {
         return response.json();
       }).then(function (imagenes) {
         _this2.cambiarEstado(nivel, imagenes);
@@ -36491,7 +36491,7 @@ var Home = /*#__PURE__*/function (_Component) {
 
       for (var i = 0; i < numFilas; i++) {
         rows.push( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("tr", {
-          key: numFilas + '' + i
+          key: numFilas + "" + i
         }, " ", this.items(imgs[i], numFilas * i, numFilas), " "));
       }
 
@@ -36522,7 +36522,7 @@ var Home = /*#__PURE__*/function (_Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("table", {
         className: "tabla"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("tbody", null, this.rows()))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("img", {
-        src: imagen ? imagen : '',
+        src: imagen ? imagen : "",
         alt: "",
         id: "img-principal"
       })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_btn_iniciar_juego__WEBPACK_IMPORTED_MODULE_0__["default"], {
