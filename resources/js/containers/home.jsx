@@ -56,7 +56,7 @@ class Home extends Component {
     }
     cargarNivel(e) {
         let nivel = e.target.value;
-        fetch(`http://192.168.10.10/nivel/${nivel}/img/${imagen.split('/')[2] }`)
+        fetch(`http://${window.location.hostname}/nivel/${nivel}/img/${imagen.split('/')[2] }`)
             .then((response) => {
                 return response.json()
             })
