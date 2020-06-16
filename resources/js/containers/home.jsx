@@ -55,11 +55,6 @@ class Home extends Component {
     }
     cargarNivel(e) {
         let nivel = e.target.value;
-<<<<<<< HEAD
-        fetch(`http://${window.location.hostname}/nivel/${nivel}/img/${imagen.split('/')[2] }`)
-            .then((response) => {
-                return response.json()
-=======
         fetch(
             `http://${window.location.hostname}/nivel/${nivel}/img/${
                 imagen.split("/")[2]
@@ -67,7 +62,6 @@ class Home extends Component {
         )
             .then(response => {
                 return response.json();
->>>>>>> 048a2cb53b332cd6990fa101a8f6d4c22facc8c8
             })
             .then(imagenes => {
                 this.cambiarEstado(nivel, imagenes);
@@ -121,7 +115,6 @@ class Home extends Component {
     }
 
     render() {
-        let items = [];
 
         return (
             <div id="home" className="juego">
